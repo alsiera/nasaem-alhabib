@@ -184,6 +184,7 @@ h2{font-family:var(--display);font-weight:700;color:var(--title);line-height:1.2
 .hub:hover{color:var(--gold)}
 .credit{border-right:0 !important;padding-right:0 !important}
 .dots{max-width:300px}
+.imgslot .capbar{display:none !important}
 </style>
 </head>
 <body>
@@ -493,7 +494,7 @@ var SEERA_IMAGES = {
     var u=SEERA_IMAGES[s.getAttribute('data-img')];
     if(u){s.classList.add('filled');s.style.backgroundImage='url("'+u+'")';
       [].forEach.call(s.children,function(e){if(!e.classList.contains('capbar'))e.style.display='none'});
-      var cap=document.createElement('div');cap.className='capbar';var c=s.querySelector('.cap');cap.textContent=c?c.textContent:'';s.appendChild(cap);}
+      }
   });
 
   fit(); show(0);

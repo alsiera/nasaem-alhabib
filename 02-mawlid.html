@@ -101,6 +101,7 @@ h2{font-family:var(--display);font-weight:700;color:var(--title);line-height:1.2
 .hub:hover{color:var(--gold)}
 .credit{border-right:0 !important;padding-right:0 !important}
 .dots{max-width:300px}
+.imgslot .capbar{display:none !important}
 </style>
 </head>
 <body>
@@ -301,7 +302,7 @@ var SEERA_IMAGES = { birth_light:"birth_light.jpg", sheep:"sheep.jpg", caravan:"
   function toggleFS(){if(!inFS()){wrap.classList.add('maxi');if(wrap.requestFullscreen)wrap.requestFullscreen().catch(function(){});fsBtn.textContent='⛶ إنهاء';}else{wrap.classList.remove('maxi');if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen().catch(function(){});fsBtn.textContent='⛶ ملء الشاشة';}fit();}
   fsBtn.onclick=toggleFS;
   document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement){wrap.classList.remove('maxi');fsBtn.textContent='⛶ ملء الشاشة'}fit();});
-  document.querySelectorAll('.imgslot').forEach(function(s){var u=SEERA_IMAGES[s.getAttribute('data-img')];if(u){s.classList.add('filled');s.style.backgroundImage='url("'+u+'")';[].forEach.call(s.children,function(e){if(!e.classList.contains('capbar'))e.style.display='none'});var cap=document.createElement('div');cap.className='capbar';var c=s.querySelector('.cap');cap.textContent=c?c.textContent:'';s.appendChild(cap);}});
+  document.querySelectorAll('.imgslot').forEach(function(s){var u=SEERA_IMAGES[s.getAttribute('data-img')];if(u){s.classList.add('filled');s.style.backgroundImage='url("'+u+'")';[].forEach.call(s.children,function(e){if(!e.classList.contains('capbar'))e.style.display='none'});}});
   fit();show(0);
 })();
 </script>
