@@ -151,12 +151,12 @@ h2{font-family:var(--display);font-weight:700;color:var(--title);line-height:1.2
 .botbar{flex:none;height:62px;background:linear-gradient(0deg,var(--chrome),var(--chrome-2));
   display:flex;align-items:center;justify-content:space-between;padding:0 30px;gap:10px;border-top:1px solid rgba(193,154,62,.28)}
 .botbar button{all:unset;cursor:pointer;font-family:var(--display);transition:.2s;display:inline-flex;align-items:center;gap:8px}
-.nav-btn{padding:10px 22px;border-radius:999px;font-size:17px}
+.nav-btn{padding:10px 26px;border-radius:999px;font-size:18px;font-weight:700}
 .next{background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#20180a;font-weight:700;box-shadow:0 6px 16px -8px var(--halo)}
 .next:hover{filter:brightness(1.06)}
 .prev{border:2px solid rgba(193,154,62,.5);color:var(--chrome-ink)}
 .prev:hover{border-color:var(--gold)}
-.fL{display:flex;align-items:center;gap:14px}
+.fL{display:flex;align-items:center;gap:14px;min-width:150px}.fC{display:flex;align-items:center;gap:12px}.fR{display:flex;align-items:center;justify-content:flex-end;min-width:150px}
 .counter{font-family:var(--display);color:var(--chrome-sub);font-variant-numeric:tabular-nums;font-size:16px}
 .fs{color:var(--chrome-sub);font-size:16px}
 .fs:hover{color:var(--gold)}
@@ -409,16 +409,15 @@ h2{font-family:var(--display);font-weight:700;color:var(--title);line-height:1.2
     </div><!-- /deck -->
 
     <footer class="botbar">
-      <div class="fend fright"><span class="credit">إعداد: سفيان الطرابلسي</span></div>
-      <div class="fnav">
-        <button class="nav-btn prev" id="prev">السابق ⟶</button>
+      <div class="fR"><div class="dots" id="dots"></div></div>
+      <div class="fC">
+        <button class="nav-btn prev" id="prev">→ السابق</button>
         <span class="counter" id="counter">١ / ١</span>
-        <button class="nav-btn next" id="next">⟵ التالي</button>
+        <button class="nav-btn next" id="next">التالي ←</button>
       </div>
-      <div class="fend fleft">
-        <div class="dots" id="dots"></div>
-        <a class="hub" href="index.html">⌂ الفهرس</a>
+      <div class="fL">
         <button class="fs" id="fs">⛶ ملء الشاشة</button>
+        <span class="credit">إعداد: سفيان الطرابلسي · مسجد الأحبة</span>
       </div>
     </footer>
 
